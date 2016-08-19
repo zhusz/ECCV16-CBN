@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 function [outer,whole_blob_firstBatch] = batchForward(net, inter, input_indexing_dim,b,verbose)
 % If some input object is not splitted by sample index, you should put a -1 (or any other negative value into input_indexing_dim)
 % When input_indexing_dim is noted with 0, it indicates it uses the default last dim as the indexing dim)

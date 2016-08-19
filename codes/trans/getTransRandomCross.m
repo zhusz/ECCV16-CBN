@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 function T = getTransRandomCross(pose)
 % T = getTransRandomCross(pose)
 % produce trans to project poese onto randomly selected another pose

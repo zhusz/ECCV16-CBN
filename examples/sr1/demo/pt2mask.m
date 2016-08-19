@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 function mask = pt2mask(ePnow, win_size_now, sq_half_size)
 
 edge_idx = {18:22, 69:78, 23:27, 79:88, ...

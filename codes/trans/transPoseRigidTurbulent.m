@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 function [newCurrentPose,testShift] = transPoseRigidTurbulent(themeA,win_size,turb_coeff,currentPose,targetPose,errorL,errorS,maxIter)
 %   Please note 'turb_coeff' is defined as follows:
 %     (errorL - errorS) * turb_coeff = (errorNew - errorS)

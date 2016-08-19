@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 % Assumes path to matcaffe has been included
 function m = getWeight(net)
 

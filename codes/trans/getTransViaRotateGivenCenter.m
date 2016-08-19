@@ -1,3 +1,7 @@
+% Codes for ECCV-16 work `Deep Cascaded Bi-Network for Face Hallucination'
+% Any question please contact Shizhan Zhu: zhshzhutah2@gmail.com
+% Released on August 19, 2016
+
 function T = getTransViaRotateGivenCenter(theta_vector,center,rotatorLength)
 %T = getTransViaRotateGivenCenter(theta_vector,win_size)
 %   T: m*1 t_concord
