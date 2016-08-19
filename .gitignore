@@ -1,0 +1,15 @@
+*.png
+*.jpg
+*.bmp
+*.ppt
+*.pptx
+*.pdf
+*.doc
+*.docx
+*.mat
+*.model
+*.data
+*.caffemodel
+*.solverstate
+*.h5
+

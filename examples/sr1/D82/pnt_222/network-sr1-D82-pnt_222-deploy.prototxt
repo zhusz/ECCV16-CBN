@@ -1,0 +1,273 @@
+name: "sr1-D82-pnt_222"
+input: "im"
+input_dim: 64
+input_dim: 1
+input_dim: 52
+input_dim: 52
+force_backward: true
+layer {
+  name: "conv81_1"
+  type: "Convolution"
+  bottom: "im"
+  top: "conv81_1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 32
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu81_1"
+  type: "ReLU"
+  bottom: "conv81_1"
+  top: "conv81_1"
+}
+layer {
+  name: "conv81_2"
+  type: "Convolution"
+  bottom: "conv81_1"
+  top: "conv81_2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 32
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu81_2"
+  type: "ReLU"
+  bottom: "conv81_2"
+  top: "conv81_2"
+}
+layer {
+  name: "pool81"
+  type: "Pooling"
+  bottom: "conv81_2"
+  top: "pool81"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv82_1"
+  type: "Convolution"
+  bottom: "pool81"
+  top: "conv82_1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 64
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu82_1"
+  type: "ReLU"
+  bottom: "conv82_1"
+  top: "conv82_1"
+}
+layer {
+  name: "conv82_2"
+  type: "Convolution"
+  bottom: "conv82_1"
+  top: "conv82_2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 64
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu82_2"
+  type: "ReLU"
+  bottom: "conv82_2"
+  top: "conv82_2"
+}
+layer {
+  name: "pool82"
+  type: "Pooling"
+  bottom: "conv82_2"
+  top: "pool82"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv83_1"
+  type: "Convolution"
+  bottom: "pool82"
+  top: "conv83_1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 128
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu83_1"
+  type: "ReLU"
+  bottom: "conv83_1"
+  top: "conv83_1"
+}
+layer {
+  name: "conv83_2"
+  type: "Convolution"
+  bottom: "conv83_1"
+  top: "conv83_2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 128
+    pad: 0
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu83_2"
+  type: "ReLU"
+  bottom: "conv83_2"
+  top: "conv83_2"
+}
+layer {
+  name: "fc84"
+  type: "InnerProduct"
+  bottom: "conv83_2"
+  top: "fc84"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 512
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "relu84"
+  type: "ReLU"
+  bottom: "fc84"
+  top: "fc84"
+}
+layer {
+  name: "fc85"
+  type: "InnerProduct"
+  bottom: "fc84"
+  top: "fc85"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 210
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
