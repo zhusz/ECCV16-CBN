@@ -62,7 +62,7 @@ end;
 
 % h is our input
 % Begin hallucinating
-h4 = CBN(h);
+h4 = CBN(h,GPU_ID);
 
 %% view the result
 for i = 1:1000, imshow(h4(:,:,:,i)); hold on; pause();end;
