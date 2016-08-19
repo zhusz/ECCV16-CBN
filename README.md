@@ -1,6 +1,6 @@
 # ECCV16-CBN
 
-Released on Aug 19, 2016
+Released on August 19, 2016
 
 ## Description
 
