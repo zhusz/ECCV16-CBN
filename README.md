@@ -20,7 +20,7 @@ If you use the codes as part of your research project, please cite our work as f
 ```
 
 ## Dependency
-The codes are based on [caffe](https://github.com/BVLC/caffe)).
+The codes are based on [caffe](https://github.com/BVLC/caffe).
 
 This implementation has been modified toward a pure deep solution with slightly more robust results, also for the convenience of code release. The original implementation used the internal SIFT API when aligning faces. Hence we no longer provide its [VLFeat](https://github.com/vlfeat/vlfeat) retrained demo version for aligning faces and the codes are only depedent to caffe.
 
