@@ -1,7 +1,7 @@
 clear;
 addpath(genpath('../../../matlab'));
 addpath(genpath('../../../codes'));
-GPU_ID = 7;
+GPU_ID = 0;
 
 img_root = './image_source/';
 a = dir([img_root '*.png']);
