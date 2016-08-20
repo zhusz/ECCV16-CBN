@@ -27,7 +27,7 @@ This implementation has been modified toward a pure deep solution with slightly 
 ## Installation
 
 1. Install [caffe](https://github.com/BVLC/caffe). Please note that matlab binary should also be compiled. 
-2. Copy all the folders from this repo into the installed caffe, e.g. put folder `codes` in the root directory, put folder `examples/sr1` in the `examples` folder, and all other things in the root directory.
+2. Copy all the folders and files from this repo into the installed caffe, e.g. put folder `codes` in the root directory, put folder `examples/sr1` in the `examples` folder, and all other things in the root directory.
 3. Run the script `initial.sh` to obtain the models and the provided test data. You can of course use your own test data by putting them into the folder `examples/sr1/demo/image_source`.
 4. Get into the the directory of `examples/sr1/demo` and in Matlab, run `demoCBN.m` to view results.
 
