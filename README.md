@@ -24,12 +24,22 @@ The codes are based on [caffe](https://github.com/BVLC/caffe).
 
 This implementation has been modified toward a pure deep solution with slightly more robust results, also for the convenience of code release. The original implementation used the internal SIFT API when aligning faces. Hence we no longer provide its [VLFeat](https://github.com/vlfeat/vlfeat) retrained demo version for aligning faces and the codes are only depedent to caffe.
 
-## Installation
+## Installation and Running
 
 1. Install [caffe](https://github.com/BVLC/caffe). Please note that matlab binary should also be compiled. 
 2. Copy all the folders and files from this repo into the installed caffe, e.g. put folder `codes` in the root directory, put folder `examples/sr1` in the `examples` folder, and all other things in the root directory.
 3. Run the script `initial.sh` to obtain the models and the provided test data. You can of course use your own test data by putting them into the folder `examples/sr1/demo/image_source`.
 4. Get into the the directory of `examples/sr1/demo` and in Matlab, run `demoCBN.m` to view results.
+
+Note that the main algorithm presented in our [paper](http://arxiv.org/pdf/1607.05046.pdf) is only run by [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m).
+
+[demoCBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/demoCBN.m) only provides a way to generate the input LR samples. In [demoCBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/demoCBN.m) we begin from HR image only in order to get the VJ face detection box. If you want to test LR faces (not downsampled from HR) then you need to think of your own way to get the VJ face detection box.
+
+In reality, you can feed any LR faces to [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m) and view the output. What you need to be careful is that all the facial parts need to be presented in the input LR images (including face contour). On the other hand, the face cannot be too small (smaller than 5pxIOD). This is why it is recommendted to provide the input just in the same way as in [demoCBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/demoCBN.m). 
+
+We would also recommend the users to feed in some non-facial patches into the [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m), and in some cases you can observe the ghosting effect mentioned in our paper.
+
+Enjoy! :P
 
 ## Matlab Version
 The code can be run on Unix Matlab with version lower or equal to R2014b. We appologize for the inconvenience caused. The problem is in the image rigid transformation functions and they are not readjusted to the new functions like `imwarp` begin from R2015a. We will give it refactored soon.
