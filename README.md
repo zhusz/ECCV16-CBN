@@ -37,7 +37,7 @@ Note that the main algorithm presented in our [paper](http://arxiv.org/pdf/1607.
 
 In reality, you can feed any LR faces to [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m) and view the output. What you need to be careful is that all the facial parts need to be presented in the input LR images (including face contour). On the other hand, the face cannot be too small (smaller than 5pxIOD). This is why it is recommendted to provide the input just in the same way as in [demoCBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/demoCBN.m). 
 
-We would also recommend the users to feed in some non-facial patches into the [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m), and in some cases you can observe the ghosting effect mentioned in our paper.
+We would also recommend the users to feed in some non-facial patches into the [CBN.m](https://github.com/zhusz/ECCV16-CBN/blob/master/examples/sr1/demo/CBN.m), and in some cases you can observe the ghosting effect mentioned in our [paper](http://arxiv.org/pdf/1607.05046.pdf). Two general requirement: 1) the high-frequency face prior is still required (even if it does not match the LR non-facial patch); 2) the LR patch should not be saturated (e.g. a full image of [255,255,255] or [0,0,0]).
 
 Enjoy! :P
 
