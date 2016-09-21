@@ -53,7 +53,7 @@ And you would expect to see the following input and output.
 Input 
 ![alt tag](https://github.com/zhusz/ECCV16-CBN/raw/master/A.png)
 Output 
-![alt tag](https://github.com/zhusz/ECCV16-CBN/raw/master/B.png)
+![alt tag](https://github.com/zhusz/ECCV16-CBN/raw/master/C.png)
 
 Enjoy! :P
 
