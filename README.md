@@ -44,15 +44,16 @@ One of probably the most interesting findings of this paper might be related to 
 ```matlab
 >> clear; addpath(genpath('../../../matlab')); addpath(genpath('../../../codes'));
 >> h4 = CBN_ghosting(ones([16 16 1 2],'single')/3);
->> subplot(121); imshow(ones([16 16])/3); title('Input to CBN'); subplot(122); imshow(h4(:,:,:,1)); title('Output (Ghosting Effect)');
+>> subplot(121); imshow(ones([16 16])/3); title('Input to CBN');
+>> subplot(122); imshow(h4(:,:,:,1)); title('Output (Ghosting Effect)');
 ```
 
 And you would expect to see the following input and output.
 
 Input 
-![alt tag](https://www.dropbox.com/s/qokal63jib2qxkj/A.png)
+![alt tag](https://github.com/zhusz/ECCV16-CBN/raw/master/A.png)
 Output 
-![alt tag](https://www.dropbox.com/s/t3kyyn01gy7lq2p/B.png)
+![alt tag](https://github.com/zhusz/ECCV16-CBN/raw/master/B.png)
 
 Enjoy! :P
 
